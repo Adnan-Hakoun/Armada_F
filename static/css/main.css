@@ -4,6 +4,65 @@
     list-style: none;
     text-decoration: none;
 }
+/* /////////////////////navbar///////////////// */
+#navbar_container{
+    height: 6vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    font-family: 'Signika', sans-serif;
+    background-color: #004466;
+}
+
+#logo_container{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+#my_basket_container{
+    width: 10%;
+    display: flex;
+}
+#basket_logo{
+    width: 50%;
+    color: #fff;
+    font-size: 26px;
+    margin: auto;
+}
+#navbar{
+    height: 6vh;
+    width: 75%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+.navbar_item{
+    margin: auto; 
+}
+
+.navbar_item a{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+
+/* //////////////////////////body//////////////////////////////// */
+.main_body{
+    width: 100%;
+    min-height: 94vh;
+    background-color:#e6f7ff;
+    margin-top: 6vh;
+}
 
 #products_container{
     margin: 10px;

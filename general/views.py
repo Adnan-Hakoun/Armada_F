@@ -11,3 +11,6 @@ def sign_up(request):
 
 def product_details(request):
     return render(request,'product_details.html')
+
+def basket(request):
+    return render(request,'basket.html')    

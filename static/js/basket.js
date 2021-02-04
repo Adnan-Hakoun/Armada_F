@@ -38,6 +38,7 @@ function display_Products(data){
 ////////////////////ready//////////////////////////////////
 $(document).ready(function(){
     let basket_id = localStorage.getItem('basket_id')
+    console.log(basket_id)
     getRequest(`baskets/?basket_id=${basket_id}`,display_Products)
     
 })

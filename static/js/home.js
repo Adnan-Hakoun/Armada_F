@@ -91,6 +91,11 @@ $(document).on('click','#search_button',function(){
 
 })
 
+$(document).on('click','.fa-shopping-cart',function(e){
+    console.log('yes')
+    e.preventDefault();
+    window.location.href = 'http://127.0.0.1:8001/basket/'
+})
 //////////////////////////////////ready////////////////////////////////////////////    
 $(document).ready(function(){
     
@@ -101,5 +106,5 @@ $(document).ready(function(){
     }
     
     getRequest('products/',display_Products)
-    
+
 })

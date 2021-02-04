@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block main %}
+<div class = 'main_body'>
+
+
+    <div id = 'search_form_container'>
+        <input type="text" id='search_input' placeholder="rearch">
+        <input type="button" value='search' id='search_button'>
+    </div>
+
+    <div id='products_container'>
+        
+    </div>
+
+    <div id='my_basket_container'>
+        <a href="http://127.0.0.1:5500/F/html/basket.html"><button id = 'my_basket'>my basket</button></a>
+    </div>
+
+    <div id='add_products_form'>
+        <input type="text" class='text_input_area' id='product_name_input' placeholder="product name">
+        <input type="number" class='text_input_area' id='product_price_input' placeholder="product price">
+        <input type="file" class='text_input_area' id='product_image_input'>
+        <button id='product_submit' >Add</button>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     {% load static %}
@@ -34,4 +65,4 @@
     <script src="{% static 'js/requests.js' %}"></script>
     <script src="{% static 'js/home.js' %}"></script>
 </body>
-</html>
+</html> -->
