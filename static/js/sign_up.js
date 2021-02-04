@@ -1,6 +1,31 @@
-function afterCreateUser(data){
+/////////////////////after sign in store user id and basket ////////////////////////
+function store_user_id_and_basket(data){
+    let username = data.username 
+    let user_id = data.id
+    let basket_id = data.basket
+
+    localStorage.setItem('username' , username)
+    localStorage.setItem('user_id' , user_id)
+    localStorage.setItem('basket_id' , basket_id)
+    window.location.href = 'http://127.0.0.1:8001/home/'
+}
+
+//////////////////////////after sign_in/////////////////////////////////////
+function afterSignin(data){
+    let token = data.access
+    localStorage.setItem('token',token)
+    getRequest(`users/current_user/`,store_user_id_and_basket)
+}
+
+//////////////////////////after create user/////////////////////////////////////
+function afterCreateUser(data,username,password){
     console.log(data)
-    alert('stop')
+    let payload = new FormData;
+    payload.append('username' , username)
+    payload.append('password' , password)
+
+    request('api/token/',payload,function(data){afterSignin(data)})
+    
 }
 ////////////////////////////Sign-up///////////////////////////////
 $(document).on( "click",'#sign_up_button' ,function() {
@@ -14,7 +39,7 @@ $(document).on( "click",'#sign_up_button' ,function() {
     payload.append('username',username);
     payload.append('password',password);
     payload.append('age',age);
-    alert('one')
     
-    request('users/',payload,afterCreateUser)    
+    
+    request('users/',payload,function(data){afterCreateUser(data,username,password)})    
 });

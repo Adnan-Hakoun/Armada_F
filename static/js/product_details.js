@@ -67,6 +67,8 @@ $(document).ready(function(){
 
     let parts = window.location.href.split('?id=');
 
+    console.log(parts)
+
     let id = parts[parts.length-1];
 
     getRequest(`products/${id}/`,display_product_details)

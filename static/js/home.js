@@ -36,7 +36,7 @@ function display_Products(data){
         $('#products_container').append(
             `
             <div class = 'one_product_container'>
-                <a href="http://127.0.0.1:8001/product_details/?id=${id}">
+                <a href="http://127.0.0.1:8001/product_details/?id=${id}/">
                     <div class='product_image_container'>
                         <img class='product_image' src="${image}">
                     </div>

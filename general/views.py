@@ -8,3 +8,6 @@ def sign_in(request):
 
 def sign_up(request):
     return render(request,'sign_up.html')
+
+def product_details(request):
+    return render(request,'product_details.html')
