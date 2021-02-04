@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <title>Sign-in</title>
+</head>
+<body>
+    <div id='sign_in_form'>
+        <input type="text" class ='text_input_area' id='username_input' placeholder="username">
+        <input type="password" class ='text_input_area' id='password_input' placeholder="password">
+        <input type="button" id ='sign_in_button' value="Sign-in">
+    </div>
+
+    <script src="{% static 'js/requests.js' %}"></script>
+    <script src="{% static 'js/sign_in.js' %}"></script>
+</body>
+</html>

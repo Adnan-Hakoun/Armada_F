@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <title>product</title>
+</head>
+<body>
+    <div class = 'one_product_container'></div>
+
+    <div id='add_products_form'>
+        <input type="text" class='text_input_area' id='product_name_input' placeholder="product name">
+        <input type="number" class='text_input_area' id='product_price_input' placeholder="product price">
+        <input type="file" class='text_input_area' id='product_image_input'>
+        <input type="button" id='product_submit' value="update" onclick="updateProduct('update')">
+    </div>
+
+    <input type="button" id ='delete_product_input' value="delete" onclick="updateProduct('delete')">
+
+    <script src="{% static 'js/requests.js' %}"></script>
+    <script src="{% static 'js/product_details.js' %}"></script>
+</body>
+</html>
