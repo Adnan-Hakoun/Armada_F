@@ -1,0 +1,49 @@
+#side_container{
+    margin-top: 8vh;
+    width:20%;
+    height: 92vh;
+    position: fixed;
+    right: 0;  
+    background-color: pink;  
+}
+
+#add_products_form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_input_area{
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 30px;
+    width: 80%;
+    margin: auto;
+}
+#product_categories{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+}
+
+#product_submit{
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    width: 40%;
+    margin: auto;
+    background-color: #00134d;
+    font-size: 16px;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+#product_submit:hover{
+    color: black;
+    background-color: aquamarine;
+}

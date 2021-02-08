@@ -6,7 +6,7 @@
 }
 /* /////////////////////navbar///////////////// */
 #navbar_container{
-    height: 6vh;
+    height: 8vh;
     width: 100%;
     position: fixed;
     top: 0;
@@ -18,21 +18,22 @@
 
 #logo_container{
     width: 15%;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
 
-#logo{
-    color: #fff;
-    letter-spacing: 4px;
-    font-size: 30px;
-}
 #my_basket_container{
     width: 10%;
     display: flex;
 }
-#basket_logo{
-    width: 50%;
+
+#sign_out_container{
+    width: 5%;
+    display: flex;
+}
+
+.fa-sign-out-alt{
     color: #fff;
     font-size: 26px;
     margin: auto;
@@ -42,9 +43,23 @@
     width: 75%;
     left: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
 }
+
+#logo{
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+#basket_logo{
+    width: 50%;
+    color: #fff;
+    font-size: 26px;
+    margin: auto;
+}
+
 .navbar_item{
     margin: auto; 
 }
@@ -55,13 +70,43 @@
     color: #fff;
 }
 
+#search_form_container{
+    height: 6vh;    
+    display: flex;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#search_input{
+    width: 90%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 5px;
+}
+#search_button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    outline: none;
+    width: 10%;
+    border: none;
+}
+.fa-search{
+    font-size: 20px;
+    color: #999;
+}
 
 /* //////////////////////////body//////////////////////////////// */
-.main_body{
-    width: 100%;
-    min-height: 94vh;
+#body{
+    display: flex;
+}
+#main_container{
+    width: 80%;
+    min-height: 92vh;
     background-color:#e6f7ff;
-    margin-top: 6vh;
+    margin-top: 8vh;
 }
 
 #products_container{
@@ -82,40 +127,3 @@
     height: 80%;
 }
 
-#add_products_form{
-    position: absolute;
-    bottom: 0;
-    background-color: #b3c6ff;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.text_input_area{
-    outline: none;
-    border: 0;
-    border-radius: 5px;
-    padding-left: 10px;
-    height: 30px;
-    width: 20%;
-    margin: auto;
-}
-
-#product_submit{
-    outline: none;
-    border: 0;
-    border-radius: 5px;
-    height: 30px;
-    width: 5%;
-    margin: auto;
-    background-color: #00134d;
-    font-size: 16px;
-    color: #fff;
-    transition: ease 0.3s all;
-}
-
-#product_submit:hover{
-    color: black;
-    background-color: aquamarine;
-}

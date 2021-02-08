@@ -2,8 +2,9 @@ const baseUrl = 'http://127.0.0.1:8000/'
 
 function getRequest(endpoint,success){
     const token = localStorage.getItem('token')
+    let headers = token ? {'Authorization': 'Bearer '+token}:{}
     $.ajax({
-        headers:{'Authorization': 'Bearer '+token},
+        headers,
         url: baseUrl+endpoint,
         type: 'GET',
         contentType: false, 
@@ -14,9 +15,10 @@ function getRequest(endpoint,success){
 
 
 function request(endpoint,payload,success,method='POST'){
-   const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token')
+    let headers = token ? {'Authorization': 'Bearer '+token}:{} 
     $.ajax({
-        headers:{'Authorization': 'Bearer '+token},
+        headers,
         url: baseUrl+endpoint,
         data: payload,
         type : method,

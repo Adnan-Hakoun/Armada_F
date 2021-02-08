@@ -1,12 +1,15 @@
 /////////////////////after sign in store user id and basket ////////////////////////
 function store_user_id_and_basket(data){
+   
     let username = data.username 
     let user_id = data.id
     let basket_id = data.basket
+    let user_type = data.user_type
 
     localStorage.setItem('username' , username)
     localStorage.setItem('user_id' , user_id)
     localStorage.setItem('basket_id' , basket_id)
+    localStorage.setItem('user_type' , user_type)
     window.location.href = 'http://127.0.0.1:8001/home/'
 }
 
@@ -17,7 +20,7 @@ function afterSignin(data){
     getRequest(`users/current_user/`,store_user_id_and_basket)
 }
 
-/////////////////////after sign in ///////////////////////////////////
+///////////////////// sign in ///////////////////////////////////
 function signin(username,password){
    
     let payload = new FormData;
